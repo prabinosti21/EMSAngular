@@ -1,0 +1,46 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<div>
+    <p style="font-size: larger; color: green; margin-left: 10px; font:bolder">Get the detail information about the events</p>
+    <table class="table table-dark table-hover table-sm table-bordered table responsive m-1">
+        <thead class="table table-success" style="font-size: larger;">
+            <tr>
+                <th>View Guest Information</th>
+                <th>View Equipment Details</th>
+                <th>View Food & Drinks Service Availability</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td>
+                    <button class="btn btn-success" [routerLink]="['/guest/', eid]">Guest</button>    
+                    </td>
+                    <td>
+                        <button class="btn btn-success" [routerLink]="['/equipment/', eid]">Equipments</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-success" [routerLink]="['/food/', eid]">Food & Drinks</button>
+                    </td>
+                </tr>
+            </tbody>
+    </table>
+    <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .all-rights {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+  }
+</style>
+<title>All Rights Reserved</title>
+</head>
+<body>
+  <div class="all-rights">
+    &copy; 2023 Detla-Core Technology Co. All Rights Reserved.
+  </div>
+</body>
+</html>
+</div>
