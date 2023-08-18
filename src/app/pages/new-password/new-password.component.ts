@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
@@ -14,10 +14,12 @@ export class NewPasswordComponent implements OnInit {
   
   passwordForm!: FormGroup;
 
+
   ngOnInit(): void {
     this.passwordForm = this.formBuilder.group({
       email: ['',[Validators.required, Validators.email]],
-      password:['', Validators.required]
+      password:['', Validators.required],
+      securityAnswer:['', Validators.required]
     })
   }
 

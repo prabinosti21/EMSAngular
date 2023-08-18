@@ -22,9 +22,9 @@ export class UserService {
     return this.http.post<any>(this.url.concat('/register'),user,{responseType:'text'});
   }
 
-  checkEmail(email: any): Observable<any>{
+  checkUser(email: any, securityAnswer: any): Observable<any>{
     //@ts-ignore
-    return this.http.get<any>(this.url.concat('/forget/').concat(email),{responseType: 'text'});
+    return this.http.get<any>(this.url.concat('/forget/').concat(email).concat('/').concat(securityAnswer),{responseType: 'text'});
   }
 
   setPassword(user: User): Observable<any>{

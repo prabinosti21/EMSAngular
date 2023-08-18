@@ -3,17 +3,23 @@
 <div class="container">
     <div style="margin-top: 5px; color: black; background-color: aliceblue;">"Welcome to the Event Management System!
       Where seamless planning meets unforgettable experiences. 🎉
-      Please enter your credentials to access your event dashboard and start crafting exceptional moments.
+      Please enter your credentials to access your event dashboard and start crafting exceptional moments. 
+      <br>
+      If you need assistance, contact our support team at [support@email.com] or call [123-456-7890].
+      Let's create extraordinary events together!"
      </div>
-    <div style="margin-top: 5px; color: black; background-color: skyblue;">If you need assistance, contact our support team at [support@email.com] or call [123-456-7890].
-      Let's create extraordinary events together!"<br>
-      Enter your Email Id to reset your password.
+    <div style="margin-top: 5px; color: black; background-color: skyblue;">
+      Enter your Email Id & Security Question Answer:<br> 
       <div class="row m-3">
         <div class="col-md-5">
-            <input class="form-control" [(ngModel)]="searchValue" placeholder="Enter your email id">
+            <input class="form-control" [(ngModel)]="searchValue1" placeholder="Enter your email id">
+        </div>
+        <br>
+        <div class="col-md-5">
+            <input class="form-control" type="password" [(ngModel)]="searchValue2" placeholder="What is your favorite pet name?">
         </div>
         <div class="col-md-2">
-            <button class="btn btn-success" (click)="checkEmail()" title="Enter your email id">Enter</button>
+            <button class="btn btn-success" (click)="checkUser()">Enter</button>
         </div>
     </div>
   <html lang="en">

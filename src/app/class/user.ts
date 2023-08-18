@@ -1,5 +1,6 @@
 export class User {
     userId!: number;
     email?: string;
-    password?:string
+    password?:string;
+    securityAnswer?: string
 }
