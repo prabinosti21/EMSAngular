@@ -15,6 +15,7 @@ import { EquipmentsComponent } from './pages/equipments/equipments.component';
 import { NewEventComponent } from './pages/new-event/new-event.component';
 import { ResetComponent } from './pages/reset/reset.component';
 import { NewPasswordComponent } from './pages/new-password/new-password.component';
+import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { NewPasswordComponent } from './pages/new-password/new-password.componen
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BackButtonDisableModule.forRoot({preserveScroll: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
