@@ -29,6 +29,8 @@ export class NewEventComponent implements OnInit, OnDestroy {
       equipmentDetails: this.formBuilder.array([])
     })}
 
+    this.saveEvent();
+
   }
 
   ngOnDestroy(): void {
