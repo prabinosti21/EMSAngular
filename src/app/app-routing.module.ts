@@ -10,6 +10,8 @@ import { EquipmentsComponent } from './pages/equipments/equipments.component';
 import { NewEventComponent } from './pages/new-event/new-event.component';
 import { ResetComponent } from './pages/reset/reset.component';
 import { NewPasswordComponent } from './pages/new-password/new-password.component';
+import { ReviewComponent } from './review/review.component';
+import { NewReviewComponent } from './new-review/new-review.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -23,6 +25,8 @@ const routes: Routes = [
   {path:'guest/:eid', component: GuestComponent},
   {path:'food/:eid', component: FoodComponent},
   {path:'equipment/:eid', component: EquipmentsComponent},
+  {path:'review', component: ReviewComponent},
+  {path:'newReview', component: NewReviewComponent}
 ];
 
 @NgModule({

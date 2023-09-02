@@ -16,6 +16,8 @@ import { NewEventComponent } from './pages/new-event/new-event.component';
 import { ResetComponent } from './pages/reset/reset.component';
 import { NewPasswordComponent } from './pages/new-password/new-password.component';
 import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
+import { ReviewComponent } from './review/review.component';
+import { NewReviewComponent } from './new-review/new-review.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
     EquipmentsComponent,
     NewEventComponent,
     ResetComponent,
-    NewPasswordComponent
+    NewPasswordComponent,
+    ReviewComponent,
+    NewReviewComponent
   ],
   imports: [
     BrowserModule,
