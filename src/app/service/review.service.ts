@@ -2,13 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Review } from '../class/review';
+import { Likedislikes } from '../class/likedislikes';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReviewService {
 
-  url : string = 'http://localhost:8080/review'
+  url : string = 'http://localhost:8080/review';
+  url1 : string = 'http://localhost:8080/l&d';
+  likeDislike : Likedislikes [] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -27,8 +30,19 @@ export class ReviewService {
     return this.http.delete<string>(this.url.concat('/').concat(String(id)), {responseType: 'text'});
   }
 
-  getLikes():Observable<Review[]>{
+  getLikesDislikes():Observable<Likedislikes[]>{
     //@ts-ignore
-    return this.http.get<Review[]>(this.url.concat('/like'));
+    return this.http.get<Likedislikes[]>(this.url1);
   }
+
+  updateLikes(id: any): Observable<String>{
+    //@ts-ignore
+    return this.http.put<any>(this.url1.concat('/likes/').concat(id), this.likeDislike, {responseType: 'text'});
+  }
+
+  updateDisLikes(id: any): Observable<String>{
+    //@ts-ignore
+    return this.http.put<any>(this.url1.concat('/dislikes/').concat(id), this.likeDislike, {responseType: 'text'});
+  }
+
 }

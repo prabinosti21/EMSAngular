@@ -37,7 +37,35 @@
         }
     </style>
 </head>
-<button class="btn btn-success m-2" routerLink="/newReview">Post comments</button>
+<div class="row m-1">
+    <div class="col-md-5">
+    <button class="btn btn-success m-2" routerLink="/newReview">Post comments</button>
+    </div>
+<div class="col-md-7">
+<body>
+    <table>
+        <thead class="table" style="font-size: medium; font-style: italic;" >
+        <tr *ngFor="let count of likeDislikeList">
+            <th>
+                <button class="btn btn-success" style="background-color: green;" (click)="updateLikes([count.ldId])">👍Like</button>
+            </th>
+            <th>
+                <button class="btn btn-danger" style="background-color: red; margin-left: 10px;" 
+                (click)="updateDisLikes([count.ldId])">👎Dislike</button>
+            </th>
+        </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            <tr *ngFor="let count of likeDislikeList">
+                <td>likes : {{count.likeCounts}}</td>
+                <td>dislikes : {{count.dislikeCounts}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<br>
+</div>
+</div>
 <body>
     <div class="comment-box" *ngFor="let review of reviewList">
         <div class="comment-text">{{review.comment}}</div>
